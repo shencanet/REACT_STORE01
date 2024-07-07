@@ -7,8 +7,17 @@ import NotFound from '../NotFound'
 import SignIn from '../SignIn'
 import './App.css'
 
-function App() {
+const AppRoutes = () => {
+  let routes = useRoutes ([
+    {
+    path: '/',
+    element: <Home />
+    }
+  ])
+}
 
+const App = () => {
+  
   return (
     <div className="bg-red-100">
       <Home />
