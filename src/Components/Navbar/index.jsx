@@ -1,57 +1,108 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-    return (
-        <nav>
-        <ul>
-            <li>
-                <NavLink to="/shopping">SHOPPING</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/all">ALL</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/clothes">CLOTHES</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/electronics">ELECTRONICS</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/furnitures">FURNITURES</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/others">OTHERS</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/my-orders">MY ORDERS</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/my-account">MY ACCOUNT</NavLink>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <NavLink to="/sign-in">SIGN IN</NavLink>
-            </li>
-        </ul>
-        
+  const activeStyle = 'underline underline-offset-4'
 
-        </nav>
-    );
-    }
+  return (
+    <nav className='flex justify-between items-center fixed z-10 w-full py-5 px-8 text-sm font-light'>
+      <ul className='flex items-center gap-3'>
+        <li className='font-semibold text-lg'>
+          <NavLink to='/'>
+            Shopi
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            All
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/clothes'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Clothes
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/electronics'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Electronics
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/furnitures'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Furnitures
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/toys'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Toys
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/others'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Others
+          </NavLink>
+        </li>
+      </ul>
+      <ul className='flex items-center gap-3'>
+        <li className='text-black/60'>
+          teff@platzi.com
+        </li>
+        <li>
+          <NavLink
+            to='/my-orders'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            My Orders
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/my-account'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            My Account
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/sing-in'
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+            Sign In
+          </NavLink>
+        </li>
+        <li>
+          🛒 0
+        </li>
+      </ul>
+    </nav>
+  )
+}
 
-export default Navbar;
+export default Navbar
