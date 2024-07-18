@@ -5,7 +5,7 @@ const Card = ({ title, description }) => {
         <figure className="relative mb-2 w-full h-4/5">
             <span className="absolute ">Electronics</span>
             <img src="" alt=""/>
-            <div>+</div>
+            <div className="absolute top-0 right-0 flex justify-center bg-whitte w-6 h-6 rouder-full">+</div>
         </figure>
         <p>
             <span>Headphones</span>
