@@ -1,11 +1,18 @@
 const Card = ({ title, description }) => {
   return (
-    <div>
+    <div className="bg-white cursor-pointer w-56 h-60">
 
-        <figure>
-            <span></span>
+        <figure className="relative mb-2 w-full h-4/5">
+            <span className="absolute ">Electronics</span>
             <img src="" alt=""/>
+            <div>+</div>
         </figure>
+        <p>
+            <span>Headphones</span>
+            <span>$300</span>
+            
+
+        </p>
     </div>
   );
 };
